@@ -1,0 +1,12 @@
+.start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(200, 15%, 8%);
+}
+
+h1 {
+  font-weight: 600;
+}
