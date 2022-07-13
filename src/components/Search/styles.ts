@@ -25,6 +25,8 @@ export const InputSearch = styled.div`
     background: ${({ theme }: DefaultTheme) => theme.elements};
     color: ${({ theme }: DefaultTheme) => theme.text};
     width: 80%;
+    font-size: small;
+
     &::placeholder {
       color: ${({ theme }: DefaultTheme) => theme.text};
     }

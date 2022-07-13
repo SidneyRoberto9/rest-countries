@@ -7,9 +7,9 @@ export const HeaderContainer = styled.header`
   width: 100%;
   background: ${({ theme }: DefaultTheme) => theme.elements};
 
-  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.10);
-  -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.10);
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.10);
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
 
   div {
     display: flex;
