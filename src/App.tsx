@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 
+import Header from './components/Header/Header';
 import { GlobalStyles } from './styles';
 import { AppStyle } from './styles/App';
 import { darkTheme, lightTheme } from './styles/theme';
@@ -20,7 +21,7 @@ export default function App() {
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <GlobalStyles />
       <AppStyle>
-        <button onClick={toggleTheme}>App Works</button>
+        <Header theme={theme} toggleTheme={toggleTheme} />
       </AppStyle>
     </ThemeProvider>
   );
