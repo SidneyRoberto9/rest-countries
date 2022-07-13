@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { Dispatch } from 'react';
 
 import { FilterContainer } from './styles';
 
-export default function Filter() {
+interface FilterProps {
+  Region: (country: string) => void;
+}
+
+export default function Filter({ Region }: FilterProps) {
   const countries = [
     'Africa',
     'America',
@@ -14,6 +18,7 @@ export default function Filter() {
   const handleSelect = (country: string) => {
     let box = document.querySelector('.textBox');
     box && box.setAttribute('value', country);
+    Region(country);
   };
 
   const handleActive = () => {
@@ -31,8 +36,10 @@ export default function Filter() {
           readOnly
         />
         <div className='option'>
-          {countries.map((country) => (
-            <div onClick={() => handleSelect(country)}>{country}</div>
+          {countries.map((country, index) => (
+            <div key={index} onClick={() => handleSelect(country)}>
+              {country}
+            </div>
           ))}
         </div>
       </div>
