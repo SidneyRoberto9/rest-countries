@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 import { ThemeContextProvider } from './hooks/useThemeContext';
 import Details from './pages/Details';
@@ -13,6 +13,7 @@ export function Router() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/details/:id' element={<Details />} />
+          <Route path='/*' element={<Navigate to={'/'} />} />
         </Routes>
       </ThemeContextProvider>
     </BrowserRouter>
