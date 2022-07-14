@@ -8,6 +8,8 @@ interface CardProps {
 }
 
 export default function Card({ Country }: CardProps) {
+  let population = Intl.NumberFormat().format(Country.population);
+
   return (
     <CardStyle>
       <img src={Country.flags.png} alt='flag' />
@@ -16,7 +18,7 @@ export default function Card({ Country }: CardProps) {
         <div className='info'>
           <p>
             <strong>Population:</strong>
-            <b>{Country.population}</b>
+            <b>{population}</b>
           </p>
 
           <p>
