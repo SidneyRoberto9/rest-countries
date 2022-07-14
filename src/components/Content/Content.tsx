@@ -9,19 +9,25 @@ import { MainContent } from './styles';
 
 export default function Content() {
   const [region, setRegion] = useState<string>('');
+  const [search, setSearch] = useState<string>('');
+
   const { data } = useCountries(
-    region === '' ? 'all' : `region/${region}`
+    region === '' && search === ''
+      ? 'all'
+      : region === ''
+      ? `name/${search}`
+      : `region/${region}`
   );
 
   useEffect(() => {
-    console.log(data);
-  }, [data]);
+    setSearch('');
+  }, [region]);
 
   return (
     <MainContent>
       <nav>
-        <Search />
-        <Filter Region={setRegion} />
+        <Search Search={setSearch} value={search} />
+        <Filter Region={setRegion} value={region} />
       </nav>
       <div className='Cards'>
         {data.map((country, index) => (

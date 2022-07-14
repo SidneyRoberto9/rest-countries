@@ -4,11 +4,21 @@ import React from 'react';
 
 import { InputSearch } from './styles';
 
-export default function Search() {
+interface SearchProps {
+  Search: (search: string) => void;
+  value: string;
+}
+
+export default function Search({ Search, value }: SearchProps) {
   return (
     <InputSearch>
       <FontAwesomeIcon icon={faMagnifyingGlass} className='icon' />
-      <input type='text' placeholder='Search for a country...' />
+      <input
+        type='text'
+        placeholder='Search for a country...'
+        onChange={(e) => Search(e.target.value)}
+        value={value}
+      />
     </InputSearch>
   );
 }

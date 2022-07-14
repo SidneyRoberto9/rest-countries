@@ -4,9 +4,10 @@ import { FilterContainer } from './styles';
 
 interface FilterProps {
   Region: (country: string) => void;
+  value: string;
 }
 
-export default function Filter({ Region }: FilterProps) {
+export default function Filter({ Region, value }: FilterProps) {
   const countries = [
     'Africa',
     'America',
@@ -34,6 +35,7 @@ export default function Filter({ Region }: FilterProps) {
           className='textBox'
           placeholder='Filter by Region'
           readOnly
+          value={value}
         />
         <div className='option'>
           {countries.map((country, index) => (
