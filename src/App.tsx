@@ -3,12 +3,13 @@ import { ThemeProvider } from 'styled-components';
 
 import Content from './components/Content/Content';
 import Header from './components/Header/Header';
+import { useLocalStorage } from './hooks/useLocalStorage';
 import { GlobalStyles } from './styles';
 import { AppStyle } from './styles/App';
 import { darkTheme, lightTheme } from './styles/theme';
 
 export default function App() {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useLocalStorage('theme', 'light');
 
   const toggleTheme = () => {
     if (theme === 'light') {
