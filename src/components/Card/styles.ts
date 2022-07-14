@@ -10,6 +10,7 @@ export const CardStyle = styled.div`
   overflow: hidden;
   width: 270px;
   height: 340px;
+  cursor: pointer;
 
   img {
     width: 100%;
