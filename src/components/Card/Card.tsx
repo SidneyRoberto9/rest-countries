@@ -16,15 +16,15 @@ export default function Card({ Country }: CardProps) {
         <div className='info'>
           <p>
             <strong>Population:</strong>
-            <div>{Country.population}</div>
+            <b>{Country.population}</b>
           </p>
 
           <p>
-            <strong>Region:</strong> <div>{Country.region}</div>
+            <strong>Region:</strong> <b>{Country.region}</b>
           </p>
 
           <p>
-            <strong>Capital:</strong> <div>{Country.capital[0]}</div>
+            <strong>Capital:</strong> <b>{Country.capital}</b>
           </p>
         </div>
       </div>

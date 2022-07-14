@@ -9,11 +9,13 @@ import { MainContent } from './styles';
 
 export default function Content() {
   const [region, setRegion] = useState<string>('');
-  const { data } = useCountries('name/germany');
-  console.log(data);
+  const { data } = useCountries(
+    region === '' ? 'all' : `region/${region}`
+  );
+
   useEffect(() => {
-    console.log(region);
-  }, [region]);
+    console.log(data);
+  }, [data]);
 
   return (
     <MainContent>

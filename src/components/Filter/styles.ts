@@ -20,7 +20,8 @@ export const FilterContainer = styled.div`
     &::before {
       content: '';
       position: absolute;
-      right: 20px;
+
+      right: 0px;
       top: 15px;
       z-index: 10000;
       width: 8px;
@@ -57,8 +58,9 @@ export const FilterContainer = styled.div`
 
     .option {
       position: absolute;
-      top: 70px;
-      width: 100%;
+      top: 55px;
+      width: 220px;
+
       background: ${({ theme }: DefaultTheme) => theme.elements};
       box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.05);
       border-radius: 5px;
@@ -67,6 +69,7 @@ export const FilterContainer = styled.div`
 
       div {
         padding: 12px 20px;
+
         cursor: pointer;
 
         &:hover {
