@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 import { DefaultTheme } from '../../styles/theme';
 
-export const CardStyle = styled.div`
+export const CardStyle = styled.a`
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.05);

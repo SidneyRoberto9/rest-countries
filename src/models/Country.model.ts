@@ -1,4 +1,5 @@
 export interface Country {
+  borders: any;
   name: Name;
   tld: string[];
   cca2: string;

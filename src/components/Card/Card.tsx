@@ -11,7 +11,7 @@ export default function Card({ Country }: CardProps) {
   let population = Intl.NumberFormat().format(Country.population);
 
   return (
-    <CardStyle>
+    <CardStyle href={`/details/${Country.name.common}`}>
       <img src={Country.flags.png} alt='flag' />
       <div className='Box'>
         <span>{Country.name.common}</span>

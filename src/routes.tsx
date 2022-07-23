@@ -12,7 +12,7 @@ export function Router() {
         <GlobalStyles />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/details/:id' element={<Details />} />
+          <Route path='/details/:name' element={<Details />} />
           <Route path='/*' element={<Navigate to={'/'} />} />
         </Routes>
       </ThemeContextProvider>
